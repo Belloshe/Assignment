@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+:root {
+    --main-white-color: #ffffff;
+    --main-black-color: #000000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font: 16px/1.5 "Dosis", sans-serif;
+}
+
+/* Container */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.cta-contact {
+
+    background-color: rgb(#a5a5a5);
+    border: 2px solid rgb(#8f8d8d);
+    color: rgb(71, 71, 71);
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 30px;
+    cursor: pointer;
+
+}
+
+.wrapper>* {
+    padding: 20px;
+}
+
+a {
+    box-shadow: inset 0 0 0 0 #6c787c;
+    color: black;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+}
+
+a:hover {
+    box-shadow: inset 100px 0 0 0 #6c787c;
+    color: white;
+}
+
+
+/* Header */
+.page-header {
+    background: var(--main-white-color);
+}
+
+.page-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header ul {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.page-header ul li:not(:last-child) {
+    padding-right: 15px;
+}
+
+.page-header .cta-contact {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+
+/* Main */
+.page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    min-height: 350px;
+    background: linear-gradient(rgba(0, 0, 0, 0.652), #b9b2a575), url('../images/bild3.jpg');
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.page-main div {
+    max-width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .page-main {
+        padding-left: 50%;
+    }
+}
+
+.flex-outer li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #dcdcdc;
+
+
+
+}
+
+.flex-outer>li>label,
+.flex-outer li p {
+    flex: 1 0 100px;
+    max-width: 100px;
+    height: 100px;
+    margin-top: 10px;
+
+}
+
+.flex-outer>li>label+* {
+    flex: 1 0 110px;
+}
+
+.flex-outer li button {
+    margin-left: auto;
+    padding: 10px 15px;
+    border: solid rgb(0, 0, 0) 1px;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+button:hover {
+    box-shadow: inset 510px 0 0 0 #c4bfc2;
+}
+
+/*Mq*/
+@media screen and (min-width: 550px) {
+    .page-header ul {
+        width: auto;
+        margin-top: 0;
+    }
+
+    .page-header .cta-contact {
+        order: 1;
+    }
+
+    .page-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-footer ul {
+        margin-bottom: 0;
+    }
+}
+
+/* Footer */
+.page-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    background: var(--main-white-color);
+}
+
+.page-footer ul {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.page-footer ul li:not(:last-child) {
+    margin-right: 20px;
+}
